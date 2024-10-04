@@ -17,8 +17,8 @@ setwd("/data/chamal/projects/lani/neonate")
 # load data
 data <- read.csv("demographics.csv", encoding = "UTF-8", dec = ".", header = T)
 data$scanned <-relevel(data$scanned, ref = "no")
-scan_qc <- read.csv("./qc/20211018_qc.csv")
-data_qc <- merge(data,scan_qc, by= c("ID","age"))
+scan_qc <- read.csv("agreement_qc.csv")
+data_qc <- merge(data,scan_qc, by.x= c("ID","age"), by.y = c ("ID","timepoint")
 
 #Set theme for ggplots------------------------------
 myTheme <- theme_classic()+ theme(axis.text=element_text(size=16), axis.title=element_text(size=16), 
@@ -45,8 +45,8 @@ complete_unique <- subset(unique_data, unique_data$scanned %in% c("yes"))
 data <- subset(data, !is.na(data$weight))
 mod <- lmer(weight ~ condition*age *sex + total_scanned + (1|ID) + (1|mom_id), data)
 summary(mod)
-tab_model(mod, file = "../pte_paper/stats_tables/neonate_weight_lmer.doc")
-  
+
+#Extract residuals of the model and output as new csv.
 data$weight_resid <- resid(mod)
 
 write.csv(x = data, file = "data_with_weight_resids.csv")
