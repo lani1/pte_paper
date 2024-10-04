@@ -41,8 +41,8 @@ myTheme <- theme_classic()+ theme(axis.text=element_text(size=16), axis.title=el
 #Run model--------------------------------------
 mod <- lmer(scale(volume) ~ treatment * sex + (1|litter_size) + (1|coil), data = no_squish_data)
 summary(mod)
-tab_model(mod, file = "../pte_paper/stats_tables/embryo_volume_lmer.doc")
-write_clip(res.table)
+
+#Extract residuals to use in brain model later.
 no_squish_data$volume_resid <- resid(mod)
 
 write.csv(x = no_squish_data, file = "data_with_volume_resids.csv")
