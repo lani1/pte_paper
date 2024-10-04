@@ -22,9 +22,9 @@ setwd("/data/chamal/projects/lani/embryos/")
 
 #Load in data --------------------------------------
 dems <- read.csv("demographics_for_analysis.csv")
-sex <- read.csv("/data/chamal/projects/lani/embryos/transnetyx/transnetyx_all_results.csv")
+sex <- read.csv("transnetyx_all_results.csv")
 sex_dems <- merge(sex, dems, by = "Pup_ID")
-vols <- read.csv("labels/label_vols.csv")
+vols <- read.csv("label_vols.csv")
 data <- merge(sex_dems, vols, by = c("merge"))
 qc <- read.csv("qc_csvs/squish_qc.csv")
 data <- merge(data,qc, by = c("merge") )
