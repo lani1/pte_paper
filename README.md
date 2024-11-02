@@ -1,4 +1,4 @@
-# Code and instructions to reproduce results from Cupo et al (in prep., Sept 2024)
+# Code and instructions to reproduce results from Cupo et al (in prep., Sept-Nov 2024)
 This repository houses scripts and instructions to document and reproduce the results in the associated paper. The general organization is as follows:
 
 - Pregnancy outcomes: All of the code and instructions to pool dam data and produce results related to dam weight gain and behavior
