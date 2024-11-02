@@ -17,4 +17,6 @@ This repository houses scripts and instructions to document and reproduce the re
   - Weight: Code and instructions to produce longitudinal weight results
   - MRI: Code and instructions to produce longitudinal MRI results
   - Behavior: Code and instructions to produce results for open field test and prepulse inhibition
- 
+
+Data to be analysed will be hosted in the Zenodo repository associated with this pre-reserved DOI: 10.5281/zenodo.13820978
+
