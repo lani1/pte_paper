@@ -1,1 +1,8 @@
+This folder includes scripts to analyze pregnancy outcomes.
 
+dams_weight.R examines dam weight and weight gain across all experiments.
+litter_size.R examines the size of litters across all experiments.
+sex_ratio.R examines the ratio of males and females across the litters (in embryos) and after culling (in neonates and adults).
+
+nest_quality.R examines the quality of nests built in adults
+mat_obs.R Examines maternal observations during PND 2, 4, 6, and 8 in the adult cohort. 
